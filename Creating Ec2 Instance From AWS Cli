@@ -1,0 +1,116 @@
+
+ubuntu@ip-172-31-7-175:~$ aws ec2 run-instances --image-id ami-0c7217cdde317cfec --count 1 --instance-type t2.micro --key-name mykeypair1111 --security-group-ids sg-0cbc74f2553fec703 --subnet-id subnet-0662a9feadf274655
+{
+    "Groups": [],
+    "Instances": [
+        {
+            "AmiLaunchIndex": 0,
+            "ImageId": "ami-0c7217cdde317cfec",
+            "InstanceId": "i-0559c68702309e4d1",
+            "InstanceType": "t2.micro",
+            "KeyName": "mykeypair1111",
+            "LaunchTime": "2024-02-01T13:03:26.000Z",
+            "Monitoring": {
+                "State": "disabled"
+            },
+            "Placement": {
+                "AvailabilityZone": "us-east-1b",
+                "GroupName": "",
+                "Tenancy": "default"
+            },
+            "PrivateDnsName": "ip-172-31-94-159.ec2.intern                                                            al",
+            "PrivateIpAddress": "172.31.94.159",
+            "ProductCodes": [],
+            "PublicDnsName": "",
+            "State": {
+                "Code": 0,
+                "Name": "pending"
+            },
+            "StateTransitionReason": "",
+            "SubnetId": "subnet-0662a9feadf274655",
+            "VpcId": "vpc-098640470d0ffecda",
+            "Architecture": "x86_64",
+            "BlockDeviceMappings": [],
+            "ClientToken": "42bbc904-6731-47a0-91f5-dad46a                                                            3f666d",
+            "EbsOptimized": false,
+            "EnaSupport": true,
+            "Hypervisor": "xen",
+            "NetworkInterfaces": [
+                {
+                    "Attachment": {
+                        "AttachTime": "2024-02-01T13:03:26                                                            .000Z",
+                        "AttachmentId": "eni-attach-0c34e7                                                            63614d70d24",
+                        "DeleteOnTermination": true,
+                        "DeviceIndex": 0,
+                        "Status": "attaching",
+                        "NetworkCardIndex": 0
+                    },
+                    "Description": "",
+                    "Groups": [
+                        {
+                            "GroupName": "launch-wizard-4",
+                            "GroupId": "sg-0cbc74f2553fec703"
+                        }
+                    ],
+                    "Ipv6Addresses": [],
+                    "MacAddress": "12:36:64:7b:dc:3b",
+                    "NetworkInterfaceId": "eni-0ed4968a2cc677778",
+                    "OwnerId": "527354650202",
+                    "PrivateDnsName": "ip-172-31-94-159.ec2.internal",
+                    "PrivateIpAddress": "172.31.94.159",
+                    "PrivateIpAddresses": [
+                        {
+                            "Primary": true,
+                            "PrivateDnsName": "ip-172-31-94-159.ec2.internal",
+                            "PrivateIpAddress": "172.31.94.159"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Status": "in-use",
+                    "SubnetId": "subnet-0662a9feadf274655",
+                    "VpcId": "vpc-098640470d0ffecda",
+                    "InterfaceType": "interface"
+                }
+            ],
+            "RootDeviceName": "/dev/sda1",
+            "RootDeviceType": "ebs",
+            "SecurityGroups": [
+                {
+                    "GroupName": "launch-wizard-4",
+                    "GroupId": "sg-0cbc74f2553fec703"
+                }
+            ],
+            "SourceDestCheck": true,
+            "StateReason": {
+                "Code": "pending",
+                "Message": "pending"
+            },
+            "VirtualizationType": "hvm",
+            "CpuOptions": {
+                "CoreCount": 1,
+                "ThreadsPerCore": 1
+            },
+            "CapacityReservationSpecification": {
+                "CapacityReservationPreference": "open"
+            },
+            "MetadataOptions": {
+                "State": "pending",
+                "HttpTokens": "optional",
+                "HttpPutResponseHopLimit": 1,
+                "HttpEndpoint": "enabled",
+                "HttpProtocolIpv6": "disabled",
+                "InstanceMetadataTags": "disabled"
+            },
+            "EnclaveOptions": {
+                "Enabled": false
+            },
+            "PrivateDnsNameOptions": {
+                "HostnameType": "ip-name",
+                "EnableResourceNameDnsARecord": false,
+                "EnableResourceNameDnsAAAARecord": false
+            }
+        }
+    ],
+    "OwnerId": "527354650202",
+    "ReservationId": "r-06ec8d296bc219967"
+}
