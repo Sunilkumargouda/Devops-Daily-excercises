@@ -1,0 +1,20 @@
+{
+ "Version": "2012-10-17",
+ "Statement": [
+	{
+	  "Sid": "blockallpublicaccess",
+	  "Effect": "Deny",
+	  "Principal": "*",
+	  "Action": "s3:*",
+	  "Resource":[
+	    "arn:aws:s3:::app-1-payments-prod-example.com/",
+	    "arn:aws:s3:::app-1-payments-prod-example.com"
+	    ],
+		"Condition": {
+    	  "StringNotEquals": {
+			"aws:PrincipalArn": "\"aws:principalArn\": \"arn:aws:iam::527354650202:root\""
+		}
+	  }
+	}
+  ]
+}
